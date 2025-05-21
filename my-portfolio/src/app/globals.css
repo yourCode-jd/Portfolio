@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #ff014f;
+  --black: #000000;
+  --foreground: #ffffff;
+  --background: #171717;
+  --btn-color: #2563eb;
+  --border-color: #404040;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@theme inline {
+  --primary-color: var(--primary-color);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border-color);
+  --color-btn: var(--btn-color);
+  --color-black: var(--black);
+  --font-montserrat: var(--font-montserrat);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Montserrat, sans-serif;
+}
+
+.fluid-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
+  }
+}
+
+
+.masked-text {
+  position: relative;
+
+  /* Masking gradient */
+  -webkit-mask-image: linear-gradient(90deg, black 0%, black 25%, transparent 50%);
+  mask-image: linear-gradient(90deg, black 0%, black 25%, transparent 50%);
+  -webkit-mask-size: 320% 100%;
+  mask-size: 320% 100%;
+  -webkit-mask-position: left;
+  mask-position: left;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  /* Initial blur and glow */
+  /* filter: blur(8px); */
+
+  /* Animation */
+  animation: revealText 2.5s ease-in-out forwards;
+}
+
+@keyframes revealText {
+  0% {
+    -webkit-mask-position: right;
+    mask-position: right;
+    filter: blur(8px);
+    opacity: 0.2;
+  }
+
+  50% {
+    filter: blur(4px);
+    opacity: 0.7;
+  }
+
+  100% {
+    -webkit-mask-position: left;
+    mask-position: left;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* .logo {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: rotate(-3deg);
+    transform: scale(0.8);
+    filter: brightness(0);
+  }
+
+  50% {
+    transform: rotate(3deg);
+    transform: scale(1);
+    filter: brightness(1.2);
+  }
+} */
