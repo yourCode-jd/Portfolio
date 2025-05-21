@@ -19,8 +19,8 @@ function Header() {
                 </div> */}
 
                 <div className=' bg-opacity-60 backdrop-blur-xs rounded-full flex justify-between items-center gap-2.5 py-6 '>
-                    <h1 className='text-3xl font-bold'>LOGO</h1>
-                    <Image src="hamBurger.svg" alt="humBurger" width={45} height={45} className='cursor-pointer animate-bounce' onClick={toggleMenu} />
+                    <h1 className='masked-text text-3xl font-bold'>LOGO</h1>
+                    <Image src="hamBurger.svg" alt="humBurger" width={45} height={45} className='cursor-pointer masked-text' onClick={toggleMenu} />
                 </div>
 
                 {/* Desktop Toggle Navigation */}
