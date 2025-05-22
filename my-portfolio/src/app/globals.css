@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #ff014f;
+  --secondary-color: #ff014f;
   --black: #000000;
   --foreground: #ffffff;
   --background: #171717;
@@ -51,6 +51,30 @@ body {
   @media screen and (max-width: 768px) {
     padding: 0 10px;
   }
+}
+
+.main_heading {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--foreground);
+}
+
+.main_subHeading {
+  color: var(--secondary-color);
+  display: block;
+  letter-spacing: 1px;
+  line-height: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main_paragraph {
+  color: var(--foreground);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
 }
 
 /* 
