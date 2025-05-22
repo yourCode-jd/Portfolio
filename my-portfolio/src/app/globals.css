@@ -11,7 +11,7 @@
 }
 
 @theme inline {
-  --primary-color: var(--primary-color);
+  --secondary-color: var(--secondary-color);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border-color);
@@ -61,13 +61,20 @@ body {
 }
 
 .main_subHeading {
-  color: var(--secondary-color);
+  color: var(--foreground-color);
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 14px;
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
+  /* background-color: var(--secondary-color); */
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .main_paragraph {
@@ -75,6 +82,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
+  margin-top: 30px;
 }
 
 /* 
@@ -158,7 +166,8 @@ body {
 }
  */
 
-.textGradient {
+.textGradient,
+.bgGradient {
   background-size: 200% 200%;
   background-image: linear-gradient(to right, #ec4899, #facc15, #8b5cf6);
   background-clip: text;
@@ -167,6 +176,11 @@ body {
   animation: gradient 4s ease infinite;
   animation-delay: 2.5s;
   animation-fill-mode: forwards;
+}
+
+.bgGradient {
+  background-clip: unset;
+  -webkit-background-clip: unset;
 }
 
 .masked-text {
