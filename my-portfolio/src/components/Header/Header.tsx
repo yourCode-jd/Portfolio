@@ -32,7 +32,7 @@ function Header() {
                         <Navigation />
 
                         {/* Cross icon */}
-                        <Image src="close.svg" alt="close" width={50} height={50} className='cursor-pointer absolute top-8 right-8' onClick={toggleMenu} />
+                        <Image src="close.svg" alt="close" width={50} height={50} className='cursor-pointer absolute top-8 right-8 animate-ping' onClick={toggleMenu} />
 
                     </div>
                 </div>
