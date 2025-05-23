@@ -6,13 +6,14 @@ function About() {
         <section>
             <div className='container'>
                 <div className='relative flex items-center justify-center gap-20'>
-                    <div className='w-1/2 p-8 bgGradient shadow-[var(--secondary-color)] rounded-bl-[40px] rounded-tr-[40px]'>
+                    <div className='w-3/4 p-8 bgGradient shadow-[var(--secondary-color)] rounded-bl-[40px] rounded-tr-[40px]'>
                         <Image src="/about.webp" alt="About Me" width={500} height={665} className='rounded-bl-[40px] rounded-tr-[40px]' />
                     </div>
                     <div className='w-auto'>
-                        <span className='main_subHeading '>Visit my portfolio & Hire me</span>
-                        <h2 className='main_heading textGradient'>About Me</h2>
+                        {/* <span className='main_subHeading '>Visit my portfolio & Hire me</span> */}
+                        <h2 className='main_heading '>About Me</h2>
                         <p className='main_paragraph'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos earum eius harum! Laborum et cum quaerat maiores sit, distinctio deserunt quas minima odit. Beatae accusamus natus ducimus molestias facilis minus?</p>
+                        <button className='main_btn'>Download CV</button>
                     </div>
                 </div>
             </div>

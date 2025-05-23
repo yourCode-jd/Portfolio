@@ -3,7 +3,7 @@
 :root {
   --secondary-color: #ff014f;
   --black: #000000;
-  --foreground: #ffffff;
+  --foreground: rgb(255 255 255 / 0.75);
   --background: #171717;
   --btn-color: #2563eb;
   --border-color: #404040;
@@ -57,7 +57,7 @@ body {
   font-size: 60px;
   font-weight: 700;
   line-height: normal;
-  color: var(--foreground);
+  color: var(--color-foreground);
 }
 
 .main_subHeading {
@@ -69,12 +69,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  /* background-color: var(--secondary-color); */
-  padding: 5px 10px;
-  border-radius: 5px;
-  width: fit-content;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .main_paragraph {
@@ -83,6 +77,22 @@ body {
   line-height: 28px;
   font-weight: 400;
   margin-top: 30px;
+}
+
+.main_btn {
+  margin-top: 35px;
+  /* background-color: var(--secondary-color); */
+  color: var(--foreground);
+  padding: 10px 20px;
+  border-radius: 0 10px 0 10px;
+  min-height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid var(--foreground);
 }
 
 /* 
@@ -167,7 +177,8 @@ body {
  */
 
 .textGradient,
-.bgGradient {
+.bgGradient,
+.borderGradient {
   background-size: 200% 200%;
   background-image: linear-gradient(to right, #ec4899, #facc15, #8b5cf6);
   background-clip: text;
@@ -181,6 +192,12 @@ body {
 .bgGradient {
   background-clip: unset;
   -webkit-background-clip: unset;
+}
+
+.borderGradient {
+  border-image: linear-gradient(to right, #ec4899, #facc15, #8b5cf6);
+  border-image-slice: 1;
+  border-width: 2px;
 }
 
 .masked-text {
@@ -251,5 +268,5 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding-top: 100px;
 }
