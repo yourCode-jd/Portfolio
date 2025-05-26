@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+
 :root {
-  --secondary-color: #ff014f;
+  --primary-color: #8b5cf6;
+  --secondary-color: #ec4899;
   --black: #000000;
-  --foreground: rgb(255 255 255 / 0.75);
+  --foreground: rgb(255, 255, 255);
   --background: #171717;
   --btn-color: #2563eb;
   --border-color: #404040;
@@ -21,7 +23,7 @@
 }
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: var(--foreground);
   font-family: Montserrat, sans-serif;
 }
@@ -44,6 +46,14 @@ body {
   @media screen and (max-width: 768px) {
     padding: 0 10px;
   }
+}
+
+body,
+html,
+a,
+button,
+[role="button"] {
+  cursor: none;
 }
 
 .main_heading,
@@ -75,11 +85,17 @@ body {
 }
 
 .main_paragraph {
-  color: var(--foreground);
+  color: var(--foreground-color);
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
   margin-top: 30px;
+}
+
+::selection {
+  background-color: #8b5cf6;
+  /* pink-500 */
+  color: white;
 }
 
 .main_btn {
@@ -94,7 +110,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
   border: 1px solid var(--foreground);
 }
 
@@ -183,7 +198,7 @@ body {
 .bgGradient,
 .borderGradient {
   background-size: 200% 200%;
-  background-image: linear-gradient(to right, #ec4899, #facc15, #8b5cf6);
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -205,12 +220,10 @@ body {
 
 .masked-text {
   position: relative;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    black 0%,
-    black 25%,
-    transparent 50%
-  );
+  -webkit-mask-image: linear-gradient(90deg,
+      black 0%,
+      black 25%,
+      transparent 50%);
   mask-image: linear-gradient(90deg, black 0%, black 25%, transparent 50%);
   -webkit-mask-size: 320% 100%;
   mask-size: 320% 100%;
@@ -243,6 +256,7 @@ body {
 }
 
 @keyframes gradient {
+
   0%,
   100% {
     background-position: left center;
@@ -272,4 +286,5 @@ body {
 
 section {
   padding-top: 100px;
+  height: 100vh;
 }

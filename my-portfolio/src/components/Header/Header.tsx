@@ -19,20 +19,20 @@ function Header() {
                 </div> */}
 
                 <div className=' bg-opacity-60 backdrop-blur-xs rounded-full flex justify-between items-center gap-2.5 py-6 '>
-                    <h1 className='masked-text text-3xl font-bold'>LOGO</h1>
-                    <Image src="hamBurger.svg" alt="humBurger" width={45} height={45} className='cursor-pointer masked-text' onClick={toggleMenu} />
+                    <h1 className='masked-text text-3xl font-extrabold text-[#ec4899]'>LOGO</h1>
+                    <Image src="hamBurger1.svg" alt="humBurger" width={45} height={45} className=' masked-text' onClick={toggleMenu} />
                 </div>
 
                 {/* Desktop Toggle Navigation */}
 
-                <div className={`fixed top-0 right-0 backdrop-blur-2xl bg-opacity-60 w-full h-screen flex items-center justify-center transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed top-0 right-0 backdrop-blur-3xl bg-opacity-60 w-full h-screen flex items-center justify-center transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className='flex flex-col items-center'>
 
                         {/* navigation */}
                         <Navigation />
 
                         {/* Cross icon */}
-                        <Image src="close.svg" alt="close" width={50} height={50} className='cursor-pointer absolute top-8 right-8 animate-ping' onClick={toggleMenu} />
+                        <Image src="close.svg" alt="close" width={50} height={50} className='absolute top-8 right-8 animate-ping' onClick={toggleMenu} />
 
                     </div>
                 </div>

@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserratFont.variable} antialiased`}
+      <body className={`${montserratFont.variable} antialiased bg-[url("/bannerBg4.svg")]  bg-cover bg-position-[50%,30%]  bg-no-repeat`}
       >
         {children}
       </body>
