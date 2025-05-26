@@ -25,7 +25,7 @@ function Skill() {
     return (
         <section ref={ref} className="py-24 overflow-hidden">
             <div className="container">
-                <div className="flex flex-col items-center justify-center gap-20">
+                <div className="flex flex-col items-center justify-center gap-20 h-screen" >
                     {/* Animated heading */}
                     <motion.h2
                         initial="hidden"
@@ -44,7 +44,7 @@ function Skill() {
                     </motion.h2>
 
                     {/* Skills Grid */}
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 w-full">
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 w-full ">
                         {Skills.map((items, index) => (
                             <motion.li
                                 key={index}
@@ -53,7 +53,7 @@ function Skill() {
                                 animate={isInView ? 'visible' : 'hidden'}
                                 variants={fadeUp}
                             >
-                                <div className="group relative overflow-hidden bg-black h-[150px] transition duration-500 shadow-md p-10 border-2 border-[#1e1e2f] rounded-lg hover:transform hover:-skew-2">
+                                <div className="group relative overflow-hidden h-[120px] w-[120px] transition duration-500 shadow-[#8b5cf6]-500 p-5 rounded-lg hover:transform hover:-skew-2 bg-opacity-60 backdrop-blur-3xl shadow-lg mx-auto bgGradient">
                                     <Image
                                         src={items.src}
                                         alt={items.alt || 'Skill'}

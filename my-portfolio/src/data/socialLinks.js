@@ -9,16 +9,19 @@ const socialLinks = [
     src: "/twitter.svg",
     alt: "Twitter",
     href: "https://twitter.com/",
+    // name: "Twitter",
   },
   {
     src: "/instagram.svg",
     alt: "Instagram",
     href: "https://www.instagram.com/",
+    // name: "Instagram",
   },
   {
     src: "/linkedin.svg",
     alt: "LinkedIn",
     href: "https://www.linkedin.com/",
+    // name: "LinkedIn",
   },
   // {
   //   src: "/github.svg",

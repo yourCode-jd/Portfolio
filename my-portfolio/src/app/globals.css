@@ -88,7 +88,7 @@ button,
   color: var(--foreground-color);
   font-size: 16px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 30px;
 }
 
@@ -287,4 +287,8 @@ button,
 section {
   padding-top: 100px;
   height: 100vh;
+}
+
+.skillImg {
+  filter: sepia(0.5);
 }

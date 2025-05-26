@@ -16,7 +16,7 @@ function About() {
                         initial={{ opacity: 0, x: -50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className='masked-text w-3/4 p-2 bgGradient shadow-[var(--secondary-color)] rounded-bl-[300px] rounded-tr-[300px]'
+                        className=' w-3/4 p-5 bg-opacity-60 backdrop-blur-3xl rounded-bl-[300px] rounded-tr-[300px] shadow-lg'
                     >
                         <Image
                             src="/about.webp"
@@ -31,13 +31,13 @@ function About() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-                        className='w-auto'
+                        className='w-auto bg-opacity-60 backdrop-blur-3xl p-5 rounded-4xl shadow-lg  flex flex-col items-center lg:items-start text-center lg:text-left'
                     >
-                        <h2 className='main_heading masked-text'>About Me</h2>
-                        <p className='main_paragraph masked-text mt-4'>
+                        <h2 className='main_heading '>About Me</h2>
+                        <p className='main_paragraph mt-4 '>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos earum eius harum! Laborum et cum quaerat maiores sit, distinctio deserunt quas minima odit. Beatae accusamus natus ducimus molestias facilis minus?
                         </p>
-                        <button className='main_btn masked-text mt-6'>Download CV</button>
+                        <button className='main_btn mt-6 '>Download CV</button>
                     </motion.div>
                 </div>
             </div>
