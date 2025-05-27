@@ -53,7 +53,7 @@ function Skill() {
                                 animate={isInView ? 'visible' : 'hidden'}
                                 variants={fadeUp}
                             >
-                                <div className="group relative overflow-hidden h-[120px] w-[120px] transition duration-500 shadow-[#8b5cf6]-500 p-5 rounded-lg hover:transform hover:-skew-2 bg-opacity-60 backdrop-blur-3xl shadow-lg mx-auto bgGradient">
+                                <div className="group relative overflow-hidden h-[120px] w-[120px] transition duration-500 shadow-[#8b5cf6]-500 p-5 rounded-lg hover:transform hover:-skew-2 bg-opacity-60 backdrop-blur-3xl shadow-lg mx-auto ">
                                     <Image
                                         src={items.src}
                                         alt={items.alt || 'Skill'}
